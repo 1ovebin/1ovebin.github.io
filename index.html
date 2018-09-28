@@ -66,7 +66,7 @@
             
         </a>
         <hgroup>
-          <h1 class="header-author"><a href="/">libin</a></h1>
+          <h1 class="header-author"><a href="/">undefined007</a></h1>
         </hgroup>
         
         
@@ -194,7 +194,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/ES5/" style="font-size: 10px;">ES5</a>
+                        <a href="/tags/Array/" style="font-size: 10px;">Array</a> <a href="/tags/ES5/" style="font-size: 20px;">ES5</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/json/" style="font-size: 10px;">json</a> <a href="/tags/严格模式/" style="font-size: 10px;">严格模式</a>
                     </div>
                 </section>
                 
@@ -228,7 +228,7 @@
       <nav id="mobile-nav">
       <div class="overlay">
           <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">libin</a></h1>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">undefined007</a></h1>
       </div>
     <div class="intrude-less">
         <header id="header" class="inner">
@@ -238,7 +238,7 @@
                 
             </a>
             <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">libin</a></h1>
+              <h1 class="header-author"><a href="/" title="回到主页">undefined007</a></h1>
             </hgroup>
             
             <nav class="header-menu">
@@ -272,6 +272,215 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-ES5-Array" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/09/28/ES5-Array/" class="article-date">
+      <time datetime="2018-09-28T07:54:49.000Z" itemprop="datePublished">2018-09-28</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/09/28/ES5-Array/">ES5-Array</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <blockquote></blockquote>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES5/">ES5</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-ES5-Object" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/09/28/ES5-Object/" class="article-date">
+      <time datetime="2018-09-28T07:15:03.000Z" itemprop="datePublished">2018-09-28</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/09/28/ES5-Object/">ES5-Object</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <blockquote><p>ES5给Object扩展了好一些静态方法, 常用的2个:</p>
+</blockquote>
+<h2 id="Object-create-proto-descriptors"><a href="#Object-create-proto-descriptors" class="headerlink" title="Object.create(proto, [descriptors])"></a>Object.create(proto, [descriptors])</h2><blockquote><ul>
+<li>作用: 以指定对象为原型创建新的对象</li>
+<li>为新的对象指定新的属性, 并对属性进行描述<br>value : 指定值<br>writable : 标识当前属性值是否是可修改的, 默认为false<br>configurable: 标识当前属性是否可以被删除 默认为false<br>enumerable： 标识当前属性是否能用for in 枚举 默认为false <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create" target="_blank" rel="noopener">详细介绍</a></li>
+</ul>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;name : <span class="string">'kobe'</span>, age : 22&#125;;</span><br><span class="line">var obg1 = &#123;&#125;;</span><br><span class="line">obj1 = Object.create(obj, &#123;</span><br><span class="line">  sex : &#123;</span><br><span class="line">      value : <span class="string">'男'</span>,</span><br><span class="line">      writable : <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">obj1.sex = <span class="string">'女'</span>;</span><br><span class="line">console.log(obj1.sex);</span><br></pre></td></tr></table></figure>
+<h2 id="Object-defineProperties-object-descriptors"><a href="#Object-defineProperties-object-descriptors" class="headerlink" title="Object.defineProperties(object, descriptors)"></a>Object.defineProperties(object, descriptors)</h2><blockquote><ul>
+<li>作用: 为指定对象定义扩展多个属性</li>
+<li>get ：用来获取当前属性值得回调函数</li>
+<li>set ：修改当前属性值得触发的回调函数，并且实参即为修改后的值</li>
+<li>存取器属性：setter,getter一个用来存值，一个用来取值</li>
+</ul>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">  var obj2 = &#123;</span><br><span class="line">      firstName : <span class="string">'kobe'</span>,</span><br><span class="line">      lastName : <span class="string">'James'</span></span><br><span class="line">    &#125;;</span><br><span class="line">    Object.defineProperties(obj2, &#123;</span><br><span class="line">      fullName : &#123;</span><br><span class="line">          get : <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">              <span class="built_in">return</span> this.firstName + <span class="string">'-'</span> + this.lastName</span><br><span class="line">          &#125;,</span><br><span class="line">          <span class="built_in">set</span> : <span class="keyword">function</span> (data) &#123;</span><br><span class="line">              var names = data.split(<span class="string">'-'</span>);</span><br><span class="line">              this.firstName = names[0];</span><br><span class="line">              this.lastName = names[1];</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    console.log(obj2.fullName);</span><br><span class="line">    obj2.firstName = <span class="string">'Irving'</span>;</span><br><span class="line">    obj2.lastName = <span class="string">'Harden'</span>;</span><br><span class="line">    console.log(obj2.fullName); // Irving-Harden</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES5/">ES5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Object/">Object</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-ES5-JSON" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/09/28/ES5-JSON/" class="article-date">
+      <time datetime="2018-09-28T06:16:06.000Z" itemprop="datePublished">2018-09-28</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/09/28/ES5-JSON/">ES5-JSON对象</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <blockquote><p>ES5中加入了一个新的js对象JSON,和window、document一样JSON属于一个全局对象。目前JSON对象提供了两种方法：</p>
+<ul>
+<li>JSON.stringify (将一个JSON对象转化为json格式的字符串)</li>
+<li>JSON.parse (将字符串转化为json格式的数据)</li>
+</ul>
+</blockquote>
+<h2 id="JSON-stringify-value-replacer-space-序列化"><a href="#JSON-stringify-value-replacer-space-序列化" class="headerlink" title="JSON.stringify(value[, replacer [, space]])序列化"></a>JSON.stringify(value[, replacer [, space]])序列化</h2><h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES5/">ES5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json/">json</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a   href="/2018/09/28/ES5-JSON/#more">查看更多 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-ES5-use-strict" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -320,7 +529,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES5/">ES5</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES5/">ES5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/严格模式/">严格模式</a></li></ul>
     </div>
 
       
@@ -419,7 +628,7 @@
     <div class="outer">
         <div id="footer-info">
             <div class="footer-left">
-                &copy; 2018 libin
+                &copy; 2018 undefined007
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
